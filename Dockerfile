@@ -7,10 +7,10 @@ ENV GO111MODULE=on \
 
 WORKDIR /build
 COPY . .
-RUN go build -o dbWriter .
+RUN go build -o outboundWriter .
 
 FROM scratch
-COPY --from=builder /build/dbWriter /
+COPY --from=builder /build/outboundWriter /
 COPY --from=builder /build/dbWriter.log /
 
-ENTRYPOINT ["/dbWriter"]
+ENTRYPOINT ["/outboundWriter"]
