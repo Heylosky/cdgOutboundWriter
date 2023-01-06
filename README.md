@@ -1,2 +1,1 @@
-Hello everyone,
-This is part of CDG processors. We called this part DB writer which will help you gather sms from message queue and writer to database.
+Hello, this is part of CDG outbound processors. We called this part outbound writer which will help you gather sms from message queue and write to database.
