@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	logger.InitLogger("./outboundWriter.log")
+	logger.InitLogger("./logs/outboundWriter.log")
 	zap.L().Info("Outbound sms DB processor starting...")
 
 	out2dbChan := make(chan []byte)

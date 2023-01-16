@@ -11,6 +11,6 @@ RUN go build -o outboundWriter .
 
 FROM scratch
 COPY --from=builder /build/outboundWriter /
-COPY --from=builder /build/outboundWriter.log /
+COPY --from=builder /build/logs /
 
 ENTRYPOINT ["/outboundWriter"]
